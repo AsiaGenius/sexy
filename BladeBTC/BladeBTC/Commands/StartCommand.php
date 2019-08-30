@@ -100,7 +100,7 @@ class StartCommand extends Command
                 $keyboard = [
                     ["Meu Saldo " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0"],
                     ["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
-                    ["Re-Investir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
+                    ["ReInvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
                     ["Minha Equipe \xF0\x9F\x91\xAB"],
                 ];
 
@@ -124,9 +124,9 @@ class StartCommand extends Command
 
             $keyboard = [
                 ["My balance \xF0\x9F\x92\xB0"],
-                ["Invest \xF0\x9F\x92\xB5", "Withdraw \xE2\x8C\x9B"],
-                ["Reinvest \xE2\x86\xA9", "Help \xE2\x9D\x93"],
-                ["My Team \xF0\x9F\x91\xAB"],
+                ["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
+                ["Reinvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
+                ["Minha Equipe \xF0\x9F\x91\xAB"],
             ];
 
             $reply_markup = $this->telegram->replyKeyboardMarkup([

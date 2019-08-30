@@ -57,7 +57,7 @@ class InfoCommand extends Command
             $keyboard = [
                 [ "Meu Saldo " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0" ],
                 [ "Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B" ],
-                [ "Re-investir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93" ],
+                [ "Reinvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93" ],
                 [ "Minha Equipe \xF0\x9F\x91\xAB" ],
             ];
 
