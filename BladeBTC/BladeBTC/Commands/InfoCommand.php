@@ -87,7 +87,7 @@ Your perfect start.
 
 ✏️ Now you see a long Wallet-ID with numbers and letters. Copy this address and send the amount you want to invest from your own wallet to the wallet displayed inside the " . BotSetting::getValueByName("app_name") . ".
 
-✏️ You can check that always on the \"My balance\" button. You also will find there all information about how many days are left in your current investments. Sometimes the investments or withdrawals can take a little longer, but that is not on me, as it is checked by Blockchain.
+✏️ You can check that always on the \"Meu Saldo\" button. You also will find there all information about how many days are left in your current investments. Sometimes the investments or withdrawals can take a little longer, but that is not on me, as it is checked by Blockchain.
 
 ✏️ And from now on you earn " . InvestmentPlan::getValueByName("base_rate") . "% daily, " . (InvestmentPlan::getValueByName("base_rate") / (24 / InvestmentPlan::getValueByName("timer_time_hour"))) . "% every " . InvestmentPlan::getValueByName("timer_time_hour") . " hours until the " . InvestmentPlan::getValueByName("contract_day") . " days are over.
 

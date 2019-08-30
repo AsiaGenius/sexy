@@ -123,7 +123,7 @@ class StartCommand extends Command
         catch (Exception $e){
 
             $keyboard = [
-                ["My balance \xF0\x9F\x92\xB0"],
+                ["Meu Saldo \xF0\x9F\x92\xB0"],
                 ["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
                 ["Reinvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
                 ["Minha Equipe \xF0\x9F\x91\xAB"],
