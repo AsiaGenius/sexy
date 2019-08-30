@@ -62,7 +62,7 @@ class StartCommand extends Command
                     "last_name"  => isset($last_name) ? $last_name : "not set",
                     "id"         => isset($id) ? $id : "not set",
                 ]);
-
+				
 				/**
 				 * Referral
 				 */
@@ -84,24 +84,24 @@ class StartCommand extends Command
                 $this->triggerCommand('start');
 
             } else {
-
-
+				
+				
 				/**
 				 * Referral
 				 */
 				if (!empty($arguments)) {
 					Referrals::BindAccount($arguments, $id);
 				}
-
+				
 
                 /**
                  * Keyboard
                  */
                 $keyboard = [
-                    ["Meu Saldo " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0"],
-                    ["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
-                    ["ReInvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
-                    ["Minha Equipe \xF0\x9F\x91\xAB"],
+                    ["My balance " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0"],
+                    ["Invest \xF0\x9F\x92\xB5", "Withdraw \xE2\x8C\x9B"],
+                    ["Reinvest \xE2\x86\xA9", "Help \xE2\x9D\x93"],
+                    ["My Team \xF0\x9F\x91\xAB"],
                 ];
 
                 $reply_markup = $this->telegram->replyKeyboardMarkup([
@@ -114,7 +114,7 @@ class StartCommand extends Command
                  * Response
                  */
                 $this->replyWithMessage([
-                    'text'         => "Olá! Sou a Inteligência Artificial IA CR, é bom ver você por aqui <b>" . $first_name . "</b>.\nExplore o menu abaixo.",
+                    'text'         => "Nice to see you again <b>" . $first_name . "</b>\nTo explore me use controls below. \xF0\x9F\x98\x84 \n To get support please go to " . BotSetting::getValueByName("support_chat_id"),
                     'reply_markup' => $reply_markup,
                     'parse_mode'   => 'HTML',
                 ]);
@@ -123,10 +123,10 @@ class StartCommand extends Command
         catch (Exception $e){
 
             $keyboard = [
-                ["Meu Saldo \xF0\x9F\x92\xB0"],
-                ["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
-                ["Reinvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
-                ["Minha Equipe \xF0\x9F\x91\xAB"],
+                ["My balance \xF0\x9F\x92\xB0"],
+                ["Invest \xF0\x9F\x92\xB5", "Withdraw \xE2\x8C\x9B"],
+                ["Reinvest \xE2\x86\xA9", "Help \xE2\x9D\x93"],
+                ["My Team \xF0\x9F\x91\xAB"],
             ];
 
             $reply_markup = $this->telegram->replyKeyboardMarkup([

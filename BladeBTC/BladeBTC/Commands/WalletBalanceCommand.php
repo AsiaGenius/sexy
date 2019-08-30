@@ -53,10 +53,10 @@ class WalletBalanceCommand extends Command
 			 * Keyboard
 			 */
 			$keyboard = [
-				["Meu Saldo " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0"],
-				["Investir \xF0\x9F\x92\xB5", "Sacar \xE2\x8C\x9B"],
-				["Reinvestir \xE2\x86\xA9", "Ajuda \xE2\x9D\x93"],
-				["Minha Equipe \xF0\x9F\x91\xAB"],
+				["My balance " . Btc::Format($user->getBalance()) . " \xF0\x9F\x92\xB0"],
+				["Invest \xF0\x9F\x92\xB5", "Withdraw \xE2\x8C\x9B"],
+				["Reinvest \xE2\x86\xA9", "Help \xE2\x9D\x93"],
+				["My Team \xF0\x9F\x91\xAB"],
 			];
 
 			$reply_markup = $this->telegram->replyKeyboardMarkup([
