@@ -16,7 +16,7 @@ class InvestCommand extends Command
 	/**
 	 * @var string Command Name
 	 */
-	protected $name = "investir";
+	protected $name = "Investir \xF0\x9F\x92\xB5";
 
 	/**
 	 * @var string Command Description
